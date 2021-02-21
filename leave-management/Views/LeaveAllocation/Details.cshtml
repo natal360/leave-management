@@ -70,12 +70,12 @@
     <ul class="list-group list-group-flush">
         @foreach (var item in Model.LeaveAllocations)
         {
-            <li class="list-group-item">
+            <li class="list-group-item" style="color:black;">
                 <h6>
                     <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-warning mr-2">
-                        <i class="fa fa-pencil"></i> Edit
+                        <i class="fas fa-pencil-alt"></i> Edit
                     </a>
-                    @item.LeaveType.Name<span class="badge badge-secondary ml-1">@item.NumberOfDays</span>
+                    @item.LeaveType.Name<span class="badge badge-secondary ml-2">@item.NumberOfDays</span>
 
                 </h6>
             </li>
@@ -85,5 +85,7 @@
 
 <div>
     @*<a asp-action="Index">Back to List</a>*@
-    <a class="btn btn-outline-secondary btn-block" asp-action="ListEmployees">Back to List</a>
+    <a class="btn btn-outline-secondary btn-block" asp-action="ListEmployees">
+        <i class="fa fa-arrow-left"></i>　Back to List
+    </a>
 </div>
